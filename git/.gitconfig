@@ -1,0 +1,30 @@
+[filter "lfs"]
+	clean = git lfs clean %f
+	smudge = git lfs smudge %f
+	required = true
+[user]
+	name = Henrique Kano
+	email = henriquekano@hotmail.com
+[alias]
+	co = checkout
+	cm = commit
+	st = status
+	br = branch
+	rmw = diff -w --no-color | git apply --cached --ignore-whitespace
+	diffw = diff --ignore-space-at-eol
+	gco = git checkout
+	gcm = git commit
+	gst = git status
+	gbr = git branch
+	hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+	type = cat-file -t
+	dump = cat-file -p
+[push]
+	default = current
+[core]
+	autocrlf = true
+	excludesfile = C:\\Users\\henri_000\\Documents\\gitignore_global.txt
+	preloadindex = true
+	fscache = true
+[gc]
+	auto = 256
